@@ -1,32 +1,73 @@
+
 body {
-    background-color: white(177, 189, 192);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
 
-  }
-  header {
-    background-color: #f0ecec;
-    padding-top: 0%;
-    text-align: justify;
-    font-size: 20px;
-    color: #000;
-  }
-
-  footer {
-    background-color: #c7bebe;
-    padding: 10px;
+header {
+    background-color: #c2c5c9;
+    color: #fff;
+    padding: 20px 0;
     text-align: center;
-    color: white;
-  }
+}
 
-  .content {
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+header p {
+    margin: 10px 0 0;
+    font-size: 1.2rem;
+}
+
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
-    align-items: flex-start; 
+    justify-content: center;
+    background-color: #333;
 }
 
-section {
-    width: 200px;
-    float: left;
-    width: 10%;
-    height: 600px;
-    background-color: #c4baba;
-    padding: 20px;
+nav ul li {
+    margin: 0;
 }
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 20px;
+    display: block;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #00aced;
+    text-decoration: none;
+}
+
