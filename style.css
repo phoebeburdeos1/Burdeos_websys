@@ -1,0 +1,32 @@
+body {
+    background-color: white(177, 189, 192);
+
+  }
+  header {
+    background-color: #f0ecec;
+    padding-top: 0%;
+    text-align: justify;
+    font-size: 20px;
+    color: #000;
+  }
+
+  footer {
+    background-color: #c7bebe;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+
+  .content {
+    display: flex;
+    align-items: flex-start; 
+}
+
+section {
+    width: 200px;
+    float: left;
+    width: 10%;
+    height: 600px;
+    background-color: #c4baba;
+    padding: 20px;
+}
