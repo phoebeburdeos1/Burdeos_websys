@@ -1,26 +1,27 @@
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    background-color: #f4f5f7;
+    color: #222;
+    scroll-behavior: smooth;
 }
 
 
 header {
-    background-color: #bdc1c7;
-    color: #fff;
-    padding: 20px 0;
+    background-color: #111827;
+    color: #f9fafb;
+    padding: 18px 0;
     text-align: center;
 }
 
 header .logo {
-    font-weight: bold;
+    font-weight: 600;
     text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
+    color: inherit;
+    font-size: 1.1rem;
 }
 
 header p { margin: 6px 0 0; }
@@ -28,61 +29,163 @@ header p { margin: 6px 0 0; }
 
 nav ul {
     list-style: none;
-    padding: 10;
+    padding: 0;
     margin: 0;
     display: flex;
-    justify-content: left;
-    background-color: #7e7676;
+    gap: 4px;
+    justify-content: flex-start;
 }
 
 nav ul li { margin: 0; }
 
 nav ul li a {
     text-decoration: none;
-    color: #fff;
-    padding: 10px 20px;
+    color: inherit;
+    padding: 8px 16px;
     display: block;
-    font-weight: bold;
+    font-weight: 500;
+    border-radius: 999px;
 }
 
-nav ul li a:hover { background-color: #555; }
+nav ul li a:hover {
+    background-color: rgba(255,255,255,0.12);
+}
 
 
-.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
 
-.hero { padding: 40px 0; text-align: center; }
-.hero h1 { margin: 0 0 10px; font-size: 2rem; }
-.hero p { margin: 0 0 16px; color: #555; }
-.btn { display: inline-block; background-color: #333; color: #fff; padding: 10px 14px; border-radius: 6px; text-decoration: none; }
+.hero {
+    padding: 56px 0 40px;
+}
 
+.hero-inner {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
 
-.section { padding: 30px 0; text-align: center; }
-.section h2 { margin: 0 0 10px; }
-.muted { color: #6b6f76; }
+.hero-text h1 {
+    margin: 0 0 10px;
+    font-size: 2.25rem;
+}
 
+.hero-text p {
+    margin: 0 0 16px;
+    color: #4b5563;
+}
 
-.projects-grid { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; margin-top: 16px; }
-.card {
-    background-color: #fff;
-    padding: 14px;
-    border-radius: 8px;
+.hero-image {
+    flex: 1;
+    min-height: 160px;
+    border-radius: 16px;
+    background: radial-gradient(circle at top left, #38bdf8, #6366f1, #111827);
+}
+
+.btn {
+    display: inline-block;
+    background-color: #111827;
+    color: #f9fafb;
+    padding: 10px 18px;
+    border-radius: 999px;
     text-decoration: none;
-    color: #333;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-    width: 300px;
+    font-weight: 500;
 }
+
+
+.section {
+    padding: 32px 0;
+    text-align: left;
+}
+
+.section h2 {
+    margin: 0 0 10px;
+}
+
+.muted { color: #6b7280; }
+
+.projects-grid {
+    display: flex;
+    gap: 14px;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.card {
+    background-color: #ffffff;
+    padding: 16px;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #111827;
+    box-shadow: 0 4px 16px rgba(15,23,42,0.08);
+    width: 300px;
+    transition: transform 140ms ease-out, box-shadow 140ms ease-out;
+}
+
 .card h3 { margin: 0 0 6px; }
-.card p { margin: 0; color: #6b6f76; }
-.card:hover { transform: translateY(-4px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); }
 
-.contact-section p a { color: #333; text-decoration: none; }
+.card p {
+    margin: 0;
+    color: #6b7280;
+}
 
-footer { background-color: #333; color: #fff; text-align: center; padding: 10px 0; margin-top: 10px; }
-footer a { color: #00aced; text-decoration: none; }
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15,23,42,0.12);
+}
+
+.contact-section p a {
+    color: inherit;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #0f172a;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 16px 0 18px;
+    margin-top: 24px;
+}
+
+footer a {
+    color: #38bdf8;
+    text-decoration: none;
+}
+
+
+.site-header .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.site-header nav {
+    margin-left: auto;
+}
 
 
 @media (max-width: 700px) {
-    .card { width: 100%; }
-    nav ul { flex-direction: column; }
+    .hero-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .section {
+        text-align: center;
+    }
+
+    .card {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
 
